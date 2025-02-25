@@ -25,9 +25,9 @@ public class User implements Serializable {
 	@GeneratedValue (strategy = GenerationType.IDENTITY)
 	private Long id;   
 	
-	private String firstNamellll;
+	private String firstName;
 	
-	private String lastNamemmmm;
+	private String lastName;
 	
 	@Temporal(TemporalType.DATE)
 	private Date dateNaissance;
