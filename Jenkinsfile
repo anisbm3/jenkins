@@ -16,11 +16,6 @@ pipeline {
         sh 'mvn clean compile'
       }
     }
-   stage('SonarQube Analysis') {
-            steps {
-                sh 'mvn sonar:sonar -Dsonar.token=sqa_ee2388421e66eb10f3e4fa512f897cfba55c38ff -Dmaven.test.skip=true';
-            }
 
-    }
   }
 }
