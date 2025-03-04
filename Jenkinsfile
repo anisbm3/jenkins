@@ -30,8 +30,7 @@ stage('Docker Image Stage') {
     steps {
         sh """
             docker login -u anisbm3 -p 25/01/2003
-            docker build -t anisbm3/timesheet-devops:1.0.0 .
-            docker push anisbm3/timesheet-devops:1.0.0
+            docker push anisbm3/timesheet-devops:1.0.0 .
         """
     }
 }
