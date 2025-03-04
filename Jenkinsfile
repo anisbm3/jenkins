@@ -29,11 +29,18 @@ pipeline {
 stage('Docker Image Stage') {
     steps {
         sh """
+            # Login to Docker
             docker login -u anisbm3 -p 25/01/2003
-            docker push anisbm3/timesheet:1.0.0 
+            
+            # Tag the already built image with a new tag
+            docker tag anisbm3/timesheet:1.0.0 anisbm3/timesheet:new-tag
+            
+            # Push the image with the new tag
+            docker push anisbm3/timesheet:new-tag
         """
     }
 }
+
 
                   
   }
